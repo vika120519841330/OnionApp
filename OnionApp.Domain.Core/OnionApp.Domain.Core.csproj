@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bill.cs" />
+    <Compile Include="Person.cs" />
     <Compile Include="JuridicalPerson.cs" />
     <Compile Include="NaturalPerson.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

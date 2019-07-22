@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace OnionApp.Domain.Core
 {
-    //Domain Model NaturalPerson
-    public class NaturalPerson : Person
+    public abstract class Person
     {
-        public string PersonFullName { get; set; }
-        public int PersonAge { get; set; }
+        public int PersonId { get; set; }
+        public List<Bill> BillsOfPerson;
     }
 }

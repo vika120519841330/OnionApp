@@ -12,5 +12,6 @@ namespace OnionApp.Domain.Core
         public int BillId { get; set; }
         public string BillNumber { get; set; }
         public double BillBalance { get; set; }
+        public int BillOwner { get; set; }
     }
 }

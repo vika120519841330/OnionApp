@@ -8,9 +8,11 @@ using System.Threading.Tasks;
 
 namespace OnionApp.Infrastructure.Data
 {
-    public class NaturalContext : DbContext
+    // Infrastructura
+    public class PersonBillContext : DbContext
     {
         public DbSet<Bill> Bills { get; set; }
         public DbSet<NaturalPerson> NPersons { get; set; }
+        public DbSet<JuridicalPerson> JPersons { get; set; }
     }
 }

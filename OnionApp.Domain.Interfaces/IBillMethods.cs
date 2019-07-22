@@ -17,7 +17,7 @@ namespace OnionApp.Domain.Interfaces
         // метод для открытия нового р/с в банке
         Bill OpenBill(Bill inst);
         // метод для пополнения и снятия ДС с выбранного р/с в банке
-        Bill DebitCreditBill(Bill inst, int sum);
+        Bill DebitCreditBill(int id, int sum);
         // метод для выбранного р/с в банке
         void CloseBill(int id);
     }

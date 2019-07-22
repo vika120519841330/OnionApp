@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 namespace OnionApp.Domain.Core
 {
     //Domain Model JuridicalPerson
-    public class JuridicalPerson
+    public class JuridicalPerson : Person
     {
-        public int ClientId { get; set; }
         public string PersonFullTitle { get; set; }
         public string TaxpayIdentNum { get; set; }
     }

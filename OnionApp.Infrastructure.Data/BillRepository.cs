@@ -10,11 +10,11 @@ using System.Web.Http;
 namespace OnionApp.Infrastructure.Data
 {
     // Реализация интерфейса (сервиса домена) репозитория
-    class BillRepository : IBillMethods
+    public class BillRepository : IBillRepositiry
     {
         // Статический обьект и метод класса
         private static BillRepository br;
-        public static IBillMethods GetStaticClient()
+        public static IBillRepositiry GetStaticBill()
         {
             br = new BillRepository();
             return br;

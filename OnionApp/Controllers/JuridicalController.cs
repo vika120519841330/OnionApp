@@ -13,7 +13,7 @@ namespace OnionApp.Controllers
     public class JuridicalController : ApiController
     {
         IJuridicalRepository jrep = JuridicalRepository.GetStaticClient();
-        // 
+        
         [HttpGet]
         //[Route("")]
         public IEnumerable<JuridicalPerson> ShowAllClients()
@@ -35,12 +35,13 @@ namespace OnionApp.Controllers
             return jrep.AddClient(inst);
         }
         [HttpPut]
+        //[Route("{id:int}/{inst}")]
         public bool UpdateClient(int id,JuridicalPerson inst)
         {
             return jrep.UpdateClient(id, inst);
         }
-
         [HttpDelete]
+        //[Route("{id:int}")]
         public void DeleteCient(int id)
         {
             jrep.DeleteCient(id);

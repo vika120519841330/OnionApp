@@ -23,18 +23,18 @@ namespace OnionApp.Infrastructure.Data
         PersonBillContext nc = new PersonBillContext();
         public IEnumerable<NaturalPerson> ShowAllClients()
         {
-            return nc.NPersons;
+            return nc.NaturalPersons;
         }
         public NaturalPerson GetClient(int id)
         {
-            var tmp = from dc in nc.NPersons
+            var tmp = from dc in nc.NaturalPersons
                       where dc.PersonId == id
                       select dc;
             return tmp.Count() > 0 ? tmp.First(): null;
         }
         public NaturalPerson AddClient([FromBody]NaturalPerson inst)
         {
-            nc.NPersons.Add(inst);
+            nc.NaturalPersons.Add(inst);
             nc.SaveChanges();
             return inst;
         }
@@ -42,7 +42,7 @@ namespace OnionApp.Infrastructure.Data
         {
             if (id == inst.PersonId)
             {
-                var tmp = from dc in nc.NPersons
+                var tmp = from dc in nc.NaturalPersons
                           where dc.PersonId == inst.PersonId
                           select dc;
                 var t = tmp.Count() > 0 ? tmp.First() : null;
@@ -69,7 +69,7 @@ namespace OnionApp.Infrastructure.Data
             var tmp = GetClient(id);
             if (tmp != null)
             {
-                nc.NPersons.Remove(tmp);
+                nc.NaturalPersons.Remove(tmp);
                 nc.SaveChanges();
             }   
         }

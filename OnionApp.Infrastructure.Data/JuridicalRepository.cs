@@ -24,15 +24,15 @@ namespace OnionApp.Infrastructure.Data
         PersonBillContext jc = new PersonBillContext();
         public IEnumerable<JuridicalPerson> ShowAllClients()
         {
-            return jc.JPersons;
+            return jc.JuridicalPersons;
         }
         public JuridicalPerson GetClient(int id)
         {
-            //var tmp = from dc in jc.JPersons
+            //var tmp = from dc in jc.JuridicalPersons
             //          where dc.PersonId == id
             //          select dc;
             //return tmp.Count() > 0 ? tmp.First() : null;
-            JuridicalPerson jurpers = jc.JPersons.Find(id);
+            JuridicalPerson jurpers = jc.JuridicalPersons.Find(id);
             if (jurpers != null)
             {
                 return jurpers;
@@ -44,13 +44,13 @@ namespace OnionApp.Infrastructure.Data
         }
         public JuridicalPerson AddClient([FromBody]JuridicalPerson inst)
         {
-            jc.JPersons.Add(inst);
+            jc.JuridicalPersons.Add(inst);
             jc.SaveChanges();
             return inst;
         }
         public bool UpdateClient(int id,[FromBody]JuridicalPerson inst)
         {
-            //var tmp = from dc in jc.JPersons
+            //var tmp = from dc in jc.JuridicalPersons
             //          where dc.PersonId == inst.PersonId
             //          select dc;
             //var t = tmp.Count() > 0 ? tmp.First() : null;
@@ -78,7 +78,7 @@ namespace OnionApp.Infrastructure.Data
             JuridicalPerson tmp = GetClient(id);
             if (tmp != null)
             {
-                jc.JPersons.Remove(tmp);
+                jc.JuridicalPersons.Remove(tmp);
                 jc.SaveChanges();
             }    
         }

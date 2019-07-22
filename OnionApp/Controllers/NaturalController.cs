@@ -34,12 +34,14 @@ namespace OnionApp.Controllers
             return nrep.AddClient(inst);
         }
         [HttpPut]
+        //[Route("{id:int}/{inst}")]
         public bool UpdateClient(int id, NaturalPerson inst)
         {
             return nrep.UpdateClient(id, inst);
         }
 
         [HttpDelete]
+        //[Route("{id:int}")]
         public void DeleteCient(int id)
         {
             nrep.DeleteCient(id);

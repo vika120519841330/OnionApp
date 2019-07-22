@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace OnionApp.Domain.Interfaces
 {
     // Domain Model Bill Service
-    public interface IBillMethods
+    public interface IBillRepositiry
     {
         // метод для получения сведений обо всех открытых расчетных счетах банка
         IEnumerable<Bill> ShowAllBills();

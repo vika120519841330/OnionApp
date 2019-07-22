@@ -13,7 +13,7 @@ namespace OnionApp.Infrastructure.Data
         protected override void Seed(PersonBillContext ndb)
         {
             // Инициализация модели физ.лиц в БД
-            ndb.NPersons.Add(
+            ndb.NaturalPersons.Add(
                 new NaturalPerson
                 {
                     PersonId = 1,
@@ -37,7 +37,7 @@ namespace OnionApp.Infrastructure.Data
                         }
                     }
                 }); 
-            ndb.NPersons.Add(new NaturalPerson
+            ndb.NaturalPersons.Add(new NaturalPerson
             {
                 PersonId = 2,
                 PersonFullName = "Петров Петр Петрович",
@@ -60,7 +60,7 @@ namespace OnionApp.Infrastructure.Data
                     }
                 }
             });
-            ndb.NPersons.Add(new NaturalPerson
+            ndb.NaturalPersons.Add(new NaturalPerson
             {
                 PersonId = 3,
                 PersonFullName = "Сидоров Николай Петрович",
@@ -77,10 +77,10 @@ namespace OnionApp.Infrastructure.Data
                 }
             });
             // Инициализация модели юр.лиц в БД
-            ndb.JPersons.Add(new JuridicalPerson { PersonFullTitle = "Стройтехносистем", TaxpayIdentNum = "123456789" });
-            ndb.JPersons.Add(new JuridicalPerson { PersonFullTitle = "Види", TaxpayIdentNum = "123456788" });
-            ndb.JPersons.Add(new JuridicalPerson { PersonFullTitle = "Промтехнология", TaxpayIdentNum = "123456787" });
-            ndb.JPersons.Add(new JuridicalPerson { PersonFullTitle = "Модная Галактика", TaxpayIdentNum = "123456786" });
+            ndb.JuridicalPersons.Add(new JuridicalPerson { PersonFullTitle = "Стройтехносистем", TaxpayIdentNum = "123456789" });
+            ndb.JuridicalPersons.Add(new JuridicalPerson { PersonFullTitle = "Види", TaxpayIdentNum = "123456788" });
+            ndb.JuridicalPersons.Add(new JuridicalPerson { PersonFullTitle = "Промтехнология", TaxpayIdentNum = "123456787" });
+            ndb.JuridicalPersons.Add(new JuridicalPerson { PersonFullTitle = "Модная Галактика", TaxpayIdentNum = "123456786" });
             // Инициализация модели расчетных счетов в БД
             ndb.Bills.Add(
                 new Bill

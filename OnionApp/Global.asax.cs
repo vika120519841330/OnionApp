@@ -15,7 +15,7 @@ namespace OnionApp
     {
         protected void Application_Start()
         {
-            Database.SetInitializer(new PersonBillContext());
+            //Database.SetInitializer(new PersonBillContext());
 
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);

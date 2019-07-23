@@ -54,6 +54,9 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.SqlXml" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -266,6 +269,10 @@
     <ProjectReference Include="..\OnionApp.Infrastructure.Data\OnionApp.Infrastructure.Data.csproj">
       <Project>{4247122A-ADC5-453F-8336-F50AA275A91F}</Project>
       <Name>OnionApp.Infrastructure.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OnionApp.Services.Interfaces\OnionApp.Services.Interfaces.csproj">
+      <Project>{29b6004b-5db9-462e-ba20-43bab8cf7078}</Project>
+      <Name>OnionApp.Services.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

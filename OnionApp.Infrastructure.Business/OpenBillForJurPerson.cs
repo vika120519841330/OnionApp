@@ -6,13 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OnionApp.Infrastructure.Business
-{
-    public class OpenBillForNJurPerson : IOpenBill
-    {
-        void OpenNewBill(Bill bill)
-        {
-            // код добавления нового р/с для юр.лица
-        }
-    }
-}
+//namespace OnionApp.Infrastructure.Business
+//{
+    //public class OpenBillForNJurPerson : IOpenBill
+    //{
+    //    void OpenNewBill(Bill bill)
+    //    {
+    //        // код добавления нового р/с для юр.лица
+    //    }
+    //}
+//}
